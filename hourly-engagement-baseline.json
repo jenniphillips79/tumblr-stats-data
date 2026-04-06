@@ -1,0 +1,33 @@
+{
+  "description": "Hourly engagement baseline for goodtransgirl.tumblr.com",
+  "methodology": "Velocity = total_notes[t] - total_notes[t-1] from consecutive hourly push indexes. All times EDT.",
+  "baseline_date": "2026-04-05 to 2026-04-06",
+  "data_points": [
+    {"hour_edt": "05:00", "date": "2026-04-05", "total_notes": 53633012, "velocity": null},
+    {"hour_edt": "06:00", "date": "2026-04-05", "total_notes": 53634968, "velocity": 1956},
+    {"hour_edt": "07:00", "date": "2026-04-05", "total_notes": 53691126, "velocity": 56158, "flag": "viral"},
+    {"hour_edt": "08:00", "date": "2026-04-05", "total_notes": 53952545, "velocity": 261419, "flag": "viral"},
+    {"hour_edt": "09:00", "date": "2026-04-05", "total_notes": 53954822, "velocity": 2277},
+    {"hour_edt": "10:00", "date": "2026-04-05", "total_notes": 53955644, "velocity": 822},
+    {"hour_edt": "11:00", "date": "2026-04-05", "total_notes": 53963742, "velocity": 8098},
+    {"hour_edt": "12:00", "date": "2026-04-05", "total_notes": 53966024, "velocity": 2282},
+    {"hour_edt": "13:00", "date": "2026-04-05", "total_notes": 53971299, "velocity": 5275},
+    {"hour_edt": "14:00", "date": "2026-04-05", "total_notes": 54029565, "velocity": 58266, "flag": "viral"},
+    {"hour_edt": "15:00", "date": "2026-04-05", "total_notes": 54031652, "velocity": 2087},
+    {"hour_edt": "16:00", "date": "2026-04-05", "total_notes": 54045405, "velocity": 13753},
+    {"hour_edt": "17:00", "date": "2026-04-05", "total_notes": 54049137, "velocity": 3732},
+    {"hour_edt": "18:00", "date": "2026-04-05", "total_notes": 54051501, "velocity": 2364},
+    {"hour_edt": "19:00", "date": "2026-04-05", "total_notes": 54061581, "velocity": 10080, "flag": "organic_peak"},
+    {"hour_edt": "20:00", "date": "2026-04-05", "total_notes": 54064472, "velocity": 2891},
+    {"hour_edt": "21:00", "date": "2026-04-05", "total_notes": 54066580, "velocity": 2108},
+    {"hour_edt": "22:00", "date": "2026-04-05", "total_notes": 54073571, "velocity": 6991, "flag": "organic_peak"},
+    {"hour_edt": "23:00", "date": "2026-04-05", "total_notes": 54078267, "velocity": 4696},
+    {"hour_edt": "00:00", "date": "2026-04-06", "total_notes": 54094231, "velocity": 15964, "flag": "possible_viral"},
+    {"hour_edt": "01:00", "date": "2026-04-06", "total_notes": 54096227, "velocity": 1996},
+    {"hour_edt": "02:00", "date": "2026-04-06", "total_notes": 54098068, "velocity": 1841},
+    {"hour_edt": "03:00", "date": "2026-04-06", "total_notes": 54110537, "velocity": 12469, "flag": "possible_viral"},
+    {"hour_edt": "04:00", "date": "2026-04-06", "total_notes": 54115570, "velocity": 5033},
+    {"hour_edt": "05:00", "date": "2026-04-06", "total_notes": 54117263, "velocity": 1693}
+  ],
+  "instructions_for_next_claudia": "Append new hourly data. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade."
+}
