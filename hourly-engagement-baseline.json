@@ -1,7 +1,7 @@
 {
   "description": "Hourly engagement baseline for goodtransgirl.tumblr.com",
   "methodology": "Velocity = total_notes[t] - total_notes[t-1] from consecutive hourly push indexes. All times EDT. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Reconciliation events (large negative velocity followed by large positive) are API batch-corrections — flag and treat as data quality issues, not real velocity.",
-  "baseline_date": "2026-04-04 to 2026-04-06",
+  "baseline_date": "2026-04-04 to 2026-04-07",
   "data_points": [
     {"hour_edt": "23:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53621532, "velocity": null},
     {"hour_edt": "00:00", "date": "2026-04-05", "day_of_week": "Sunday", "total_notes": 53623712, "velocity": 2180},
@@ -49,7 +49,17 @@
     {"hour_edt": "18:00", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54292175, "velocity": 4489},
     {"hour_edt": "19:00", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54296795, "velocity": 4620},
     {"hour_edt": "20:00", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54297694, "velocity": 899},
-    {"hour_edt": "21:00", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54303194, "velocity": 5500}
+    {"hour_edt": "21:00", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54303194, "velocity": 5500},
+    {"hour_edt": "22:02", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54306430, "velocity": 3236, "note": "push time shifted to ~:02"},
+    {"hour_edt": "23:02", "date": "2026-04-06", "day_of_week": "Monday", "total_notes": 54309451, "velocity": 3021},
+    {"hour_edt": "00:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54311960, "velocity": 2509},
+    {"hour_edt": "01:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54315797, "velocity": 3837},
+    {"hour_edt": "02:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54317572, "velocity": 1775},
+    {"hour_edt": "03:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54321733, "velocity": 4161},
+    {"hour_edt": "04:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54110946, "velocity": -210787, "flag": "reconciliation_drop", "note": "originals briefly 210 then back to 209 — likely scheduled post + batch correction"},
+    {"hour_edt": "05:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54325321, "velocity": 214375, "flag": "reconciliation_recovery"},
+    {"hour_edt": "06:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54326477, "velocity": 1156},
+    {"hour_edt": "07:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54334020, "velocity": 7543}
   ],
-  "instructions_for_next_claudia": "Append new hourly data. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Exclude reconciliation_drop/reconciliation_recovery/reconciliation_artifact points when computing hourly averages. Two data points per hour now exist for some hours (Apr 5 = Sunday, Apr 6 = Monday) — label day-of-week when averaging to separate weekday vs weekend patterns. Next backfill: Apr 4 22:00 working backward."
+  "instructions_for_next_claudia": "Append new hourly data. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Exclude reconciliation_drop/reconciliation_recovery/reconciliation_artifact points when computing hourly averages. Push times shifted to ~:02 starting Apr 6 22:00 — use hour_edt label for alignment, not exact minute. Next backfill: Apr 4 22:00 working backward (use raw GitHub URL for freshness)."
 }
