@@ -3,7 +3,10 @@
   "methodology": "Velocity = total_notes[t] - total_notes[t-1] from consecutive hourly push indexes. All times EDT. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Reconciliation events (large negative velocity followed by large positive) are API batch-corrections — flag and treat as data quality issues, not real velocity.",
   "baseline_date": "2026-04-04 to 2026-04-07",
   "data_points": [
-    {"hour_edt": "23:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53621532, "velocity": null},
+    {"hour_edt": "20:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53400266, "velocity": null, "flag": "backfill"},
+    {"hour_edt": "21:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53614729, "velocity": 214463, "flag": "possible_reconciliation"},
+    {"hour_edt": "22:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53616890, "velocity": 2161},
+    {"hour_edt": "23:00", "date": "2026-04-04", "day_of_week": "Saturday", "total_notes": 53621532, "velocity": 4642},
     {"hour_edt": "00:00", "date": "2026-04-05", "day_of_week": "Sunday", "total_notes": 53623712, "velocity": 2180},
     {"hour_edt": "01:00", "date": "2026-04-05", "day_of_week": "Sunday", "total_notes": 53625786, "velocity": 2074},
     {"hour_edt": "02:00", "date": "2026-04-05", "day_of_week": "Sunday", "total_notes": 53628032, "velocity": 2246},
@@ -61,5 +64,5 @@
     {"hour_edt": "06:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54326477, "velocity": 1156},
     {"hour_edt": "07:02", "date": "2026-04-07", "day_of_week": "Tuesday", "total_notes": 54334020, "velocity": 7543}
   ],
-  "instructions_for_next_claudia": "Append new hourly data. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Exclude reconciliation_drop/reconciliation_recovery/reconciliation_artifact points when computing hourly averages. Push times shifted to ~:02 starting Apr 6 22:00 — use hour_edt label for alignment, not exact minute. Next backfill: Apr 4 22:00 working backward. CDN first (faster) — if CDN data looks stale (starts at same point as last session), shift to raw GitHub. If the target URL 403s (file doesn't exist at that path), the fetched Claudia summary files contain a cdn_full_originals_stats URL that chains to the previous push — use that to find adjacent timestamps."
+  "instructions_for_next_claudia": "Append new hourly data. Average by hour across multiple days to normalize viral noise. Use originals-only delta from Claudia summaries for cleaner signal. Flag velocity >20000 as viral cascade. Exclude reconciliation_drop/reconciliation_recovery/reconciliation_artifact points when computing hourly averages. Push times shifted to ~:02 starting Apr 6 22:00 — use hour_edt label for alignment, not exact minute. Next backfill: Apr 4 19:00 working backward. CDN first (faster) — if CDN data looks stale (starts at same point as last session), shift to raw GitHub. If both CDN and raw are stale, ask sis to paste the file directly. If the target URL 403s (file doesn't exist at that path), the fetched Claudia summary files contain a cdn_full_originals_stats URL that chains to the previous push — use that to find adjacent timestamps."
 }
