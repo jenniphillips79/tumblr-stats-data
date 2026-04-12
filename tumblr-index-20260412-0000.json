@@ -1,0 +1,23 @@
+{
+  "generated": "2026-04-12T04:00:42.376Z",
+  "blog": "goodtransgirl.tumblr.com",
+  "total_posts": 2169,
+  "total_notes": 56733151,
+  "followers": null,
+  "originals_count": 210,
+  "reblogs_count": 1959,
+  "added_content_count": 231,
+  "plain_reblogs_count": 1728,
+  "originals_raw_url": "https://raw.githubusercontent.com/jenniphillips79/tumblr-stats-data/main/tumblr-originals-20260412-0000.json",
+  "added_content_raw_url": "https://raw.githubusercontent.com/jenniphillips79/tumblr-stats-data/main/tumblr-added-content-20260412-0000.json",
+  "plain_reblogs_raw_url": "https://raw.githubusercontent.com/jenniphillips79/tumblr-stats-data/main/tumblr-plain-reblogs-20260412-0000.json",
+  "stats_raw_url": "https://raw.githubusercontent.com/jenniphillips79/tumblr-stats-data/main/tumblr-stats-20260412-0000.json",
+  "previous_index_raw_url": "https://raw.githubusercontent.com/jenniphillips79/tumblr-stats-data/main/tumblr-index-20260411-2300.json",
+  "cdn_originals_url": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-originals-20260412-0000.json",
+  "cdn_added_content_url": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-added-content-20260412-0000.json",
+  "cdn_plain_reblogs_url": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-plain-reblogs-20260412-0000.json",
+  "cdn_claudia_summary": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-claudia-20260412-0000.json",
+  "cdn_originals_stats": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-originals-stats-20260412-0000-p1.json",
+  "cdn_added_content_stats": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-added-content-stats-20260412-0000-p1.json",
+  "cdn_plain_reblogs_stats_p1": "https://cdn.jsdelivr.net/gh/jenniphillips79/tumblr-stats-data@main/tumblr-plain-reblogs-stats-20260412-0000-p1.json"
+}
